@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="FooterView" reuseIdentifier="FooterView" id="U6b-Vx-4bR" customClass="FooterView" customModule="CollectionViewExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="twt-xw-dYQ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="16"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtr-pv-NPZ">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <state key="normal" title="-"/>
+                            <connections>
+                                <action selector="touchupMinusButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="qhA-2G-itr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHU-0V-d03">
+                            <rect key="frame" x="160" y="0.0" width="160" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <state key="normal" title="+"/>
+                            <connections>
+                                <action selector="touchUpPlusButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="TU7-xq-k5j"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="twt-xw-dYQ" secondAttribute="trailing" id="3fB-KZ-2Ds"/>
+                <constraint firstItem="twt-xw-dYQ" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Nug-n8-rv0"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="twt-xw-dYQ" secondAttribute="bottom" id="XF6-Ut-wFk"/>
+                <constraint firstItem="twt-xw-dYQ" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="ZZg-mk-5h2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+        </collectionReusableView>
+    </objects>
+</document>
